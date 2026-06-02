@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Danna ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(180deg,#140b2d,#2a1245,#ffb6d9);
+color:white;overflow-x:hidden;scroll-behavior:smooth
+}
+.stars,.hearts{position:fixed;inset:0;pointer-events:none}
+.star{position:absolute;background:#fff;border-radius:50%;animation:twinkle 3s infinite}
+@keyframes twinkle{50%{opacity:.2}}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:30px;text-align:center}
+h1{font-family:'Dancing Script',cursive;font-size:4rem}
+h2{margin-bottom:15px}
+p{max-width:700px;line-height:1.8}
+.btn{margin-top:20px;padding:14px 28px;border:none;border-radius:30px;background:#fff;color:#ff4f8b;font-weight:700;cursor:pointer}
+.card{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);padding:18px;border-radius:18px;margin:8px;max-width:380px;width:100%}
+.counter{font-size:2rem;font-weight:bold}
+.heart{position:absolute;font-size:24px;animation:rise 5s linear forwards}
+@keyframes rise{from{transform:translateY(100vh)}to{transform:translateY(-100px);opacity:0}}
+.final{font-family:'Dancing Script',cursive;font-size:2.2rem;max-width:800px}
+iframe{width:100%;max-width:420px;height:152px;border:none;border-radius:18px}
+.timeline{display:flex;flex-direction:column;gap:10px;max-width:500px;width:100%}
+.small{margin-top:20px}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="hearts" id="hearts"></div>
+
+<section>
+<h1>Para Danna ❤️</h1>
+<p>Hay personas que llegan a tu vida y la cambian por completo... Tú eres una de ellas.</p>
+<button class="btn" onclick="window.scrollTo({top:innerHeight,behavior:'smooth'})">Toca aquí ✨</button>
+</section>
+
+<section>
+<h2>Todo comenzó...</h2>
+<p>Con un mensaje por Instagram. Lo que parecía una conversación más terminó convirtiéndose en una de las mejores cosas que me han pasado.</p>
+</section>
+
+<section>
+<h2>Nuestra Canción 🎵</h2>
+<p>Pega aquí el enlace EMBED de Spotify de "Te Encontré".</p>
+<iframe src=""></iframe>
+</section>
+
+<section>
+<h2>Desde que empezamos a hablar ⏳</h2>
+<div class="counter" id="counter"></div>
+<p>Y cada segundo ha valido la pena ❤️</p>
+</section>
+
+<section>
+<h2>Una carta para ti 💌</h2>
+<p id="letter"></p>
+</section>
+
+<section>
+<h2>Lo que más me gusta de ti 🌹</h2>
+<div class="card">❤️ Tus ojos</div>
+<div class="card">❤️ Tu forma tan única de ser</div>
+<div class="card">❤️ Tu sonrisa</div>
+<div class="card">❤️ Cómo me haces sentir</div>
+<div class="card">❤️ La felicidad que traes a mi vida</div>
+<div class="card">❤️ Porque eres tú</div>
+</section>
+
+<section>
+<h2>Nuestros recuerdos ⭐</h2>
+<div class="timeline">
+<div class="card">📱 Enero 2026 — Empezamos a hablar.</div>
+<div class="card">✨ Marzo 2026 — La primera vez que nos vimos en persona.</div>
+<div class="card">💖 El día que te dije "Te amo".</div>
+</div>
+</section>
+
+<section>
+<h2>Mensaje secreto 👀</h2>
+<button class="btn" onclick="alert('Eres la mejor casualidad que me ha pasado ❤️')">No tocar</button>
+</section>
+
+<section>
+<div class="final">
+Danna...<br><br>
+Gracias por llegar a mi vida.<br>
+Gracias por cada sonrisa.<br>
+Gracias por cada momento.<br>
+Me haces muy feliz.<br>
+Te amo con todo mi corazón.<br>
+Eres el amor de mi vida. ❤️
+</div>
+<p class="small">Con amor,<br><b>Pipe ❤️</b></p>
+<button class="btn" onclick="rain()">Te Amo ❤️</button>
+</section>
+
+<script>
+for(let i=0;i<180;i++){
+ let s=document.createElement('div');
+ s.className='star';
+ let z=Math.random()*3+1;
+ s.style.width=z+'px'; s.style.height=z+'px';
+ s.style.left=Math.random()*100+'%';
+ s.style.top=Math.random()*100+'%';
+ document.getElementById('stars').appendChild(s);
+}
+
+const start=new Date("2026-01-15T00:00:00");
+setInterval(()=>{
+ let now=new Date();
+ let diff=now-start;
+ let d=Math.floor(diff/86400000);
+ let h=Math.floor(diff/3600000)%24;
+ let m=Math.floor(diff/60000)%60;
+ let s=Math.floor(diff/1000)%60;
+ document.getElementById('counter').textContent=`${d} días ${h}h ${m}m ${s}s`;
+},1000);
+
+const text=`Danna...
+
+Si alguien me hubiera dicho que un simple mensaje por Instagram iba a cambiar tanto mis días, probablemente no lo habría creído.
+
+Pero entonces apareciste tú.
+
+Lo primero que me llamó la atención fueron tus ojos y tu forma tan única de ser. Poco a poco te convertiste en alguien que esperaba cada día.
+
+Nunca voy a olvidar la primera vez que nos vimos en persona, ni la primera vez que te dije "te amo".
+
+Gracias por cada conversación, por cada sonrisa y por hacerme sentir tan feliz.
+
+Te amo.
+
+Y quiero que sepas que para mí eres el amor de mi vida.
+
+Con todo mi corazón,
+
+Pipe ❤️`;
+
+let i=0;
+function type(){
+ if(i<text.length){
+  document.getElementById('letter').textContent+=text.charAt(i++);
+  setTimeout(type,35);
+ }
+}
+type();
+
+function rain(){
+ for(let i=0;i<60;i++){
+  let h=document.createElement('div');
+  h.className='heart';
+  h.innerHTML='❤️';
+  h.style.left=Math.random()*100+'%';
+  document.getElementById('hearts').appendChild(h);
+  setTimeout(()=>h.remove(),5000);
+ }
+}
+</script>
+</body>
+</html>
